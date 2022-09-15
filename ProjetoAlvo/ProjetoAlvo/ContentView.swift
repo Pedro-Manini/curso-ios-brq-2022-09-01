@@ -115,7 +115,7 @@ struct SliderView: View {
             Text("1")
             Slider(value: $sliderNumber, in: 1...100)
             Text("100")
-        }
+        }.padding()
     }
 }
 
