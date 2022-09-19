@@ -13,6 +13,7 @@
 		7605246928D3B74400B772F8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7605246828D3B74400B772F8 /* Preview Assets.xcassets */; };
 		7605247128D3B86E00B772F8 /* FoodModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7605246F28D3B86E00B772F8 /* FoodModel.xcdatamodeld */; };
 		7605247428D3BD1000B772F8 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7605247328D3BD1000B772F8 /* DataController.swift */; };
+		7645B87A28D8E53B00D36180 /* EditFoodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7645B87928D8E53B00D36180 /* EditFoodView.swift */; };
 		76EC649828D504B100D0CD77 /* AddFoodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76EC649728D504B100D0CD77 /* AddFoodView.swift */; };
 /* End PBXBuildFile section */
 
@@ -24,6 +25,7 @@
 		7605246828D3B74400B772F8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7605247028D3B86E00B772F8 /* FoodModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FoodModel.xcdatamodel; sourceTree = "<group>"; };
 		7605247328D3BD1000B772F8 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = SOURCE_ROOT; };
+		7645B87928D8E53B00D36180 /* EditFoodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditFoodView.swift; sourceTree = "<group>"; };
 		76EC649728D504B100D0CD77 /* AddFoodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFoodView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -60,6 +62,7 @@
 				7605247228D3BB7A00B772F8 /* DataModel */,
 				7605246128D3B74300B772F8 /* Projeto_iCalApp.swift */,
 				7605246328D3B74300B772F8 /* ContentView.swift */,
+				7645B87928D8E53B00D36180 /* EditFoodView.swift */,
 				76EC649728D504B100D0CD77 /* AddFoodView.swift */,
 				7605246528D3B74400B772F8 /* Assets.xcassets */,
 				7605246728D3B74400B772F8 /* Preview Content */,
@@ -156,6 +159,7 @@
 			files = (
 				76EC649828D504B100D0CD77 /* AddFoodView.swift in Sources */,
 				7605246428D3B74300B772F8 /* ContentView.swift in Sources */,
+				7645B87A28D8E53B00D36180 /* EditFoodView.swift in Sources */,
 				7605247428D3BD1000B772F8 /* DataController.swift in Sources */,
 				7605246228D3B74300B772F8 /* Projeto_iCalApp.swift in Sources */,
 				7605247128D3B86E00B772F8 /* FoodModel.xcdatamodeld in Sources */,
