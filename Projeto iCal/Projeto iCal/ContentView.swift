@@ -25,7 +25,7 @@ struct ContentView: View {
     
     @Environment(\.managedObjectContext) var managedObjectContext
     
-    @FetchRequest ( sortDescriptors: [SortDescriptor(\.date, order : .reverse)] ) var food: FetchedResults<Food>
+    @FetchRequest(sortDescriptors: [SortDescriptor(\.date, order : .reverse)] ) var food: FetchedResults<Food>
     
     @State var isAddView : Bool = false
     
@@ -42,7 +42,7 @@ struct ContentView: View {
                     
                     ForEach(food) { foodElement in
                         
-                        NavigationLink(destination: EditFoodView( isAddView: $isAddView, food: foodElement )){
+                        NavigationLink(destination: EditFoodView( isAddView: $isAddView, food: foodElement)){
                             
                             FoodDetailView(foodName: foodElement.name ??  "", foodCalories: foodElement.calories, foodDate: foodElement.date ?? Date())
                             
@@ -51,7 +51,7 @@ struct ContentView: View {
                         }
                         
                     }
-                    .onDelete(perform: deleteFood )
+                    .onDelete(perform: deleteFood)
                 }
                 
                 .navigationTitle("iCalories")
