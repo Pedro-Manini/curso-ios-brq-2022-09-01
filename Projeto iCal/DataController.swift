@@ -88,11 +88,11 @@ class DataController : ObservableObject {
     
     func deleteFood(offsets: IndexSet, context: NSManagedObjectContext, food: FetchedResults<Food>){
         
-        // para cada elemento que queremos deletar, temos que atuliar o contexto com esta operação
+        // para cada elemento que queremos deletar, temos que atualizar o contexto com esta operação
         // offsets é uma lista
         // $0 -> para pegar o primeiro elemento que vem na função
         // (arg1, arg2, arg3)
-        // ($0   , $1 , $2)
+        // ($0  , $1  , $2)
         
         // para cada elemendo do offset, eu acho o mesmo no array food e delete do contexto
         offsets.map{ food[$0] }

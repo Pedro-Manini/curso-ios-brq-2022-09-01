@@ -21,11 +21,13 @@ class DataController : ObservableObject {
         container.loadPersistentStores { description, error in
             if let error = error{
                 print("Erro ao carregar os dados: \(error.localizedDescription)")
+                
             }            
         }
     }
     
     func save(context: NSManagedObjectContext) {
+        
         do {
             
             try context.save()
@@ -52,7 +54,26 @@ class DataController : ObservableObject {
     }
     
     
+    func editUsuarios(userOld: Usuarios, nome: String, sobrenome: String, senha: String, email: String,  context : NSManagedObjectContext) {
+        
+        userOld.nome = nome
+        userOld.sobrenome = sobrenome
+        userOld.senha = senha
+        userOld.email = email
+        userOld.id = UUID()
+        userOld.dia = Date()
+        
+        save(context: context)
+        
+    }
+    
+    
     func deleteUsuarios(offsets: IndexSet, context: NSManagedObjectContext, user: FetchedResults<Usuarios>) {
+        
+        offsets.map{ user[$0] }
+            .forEach( context.delete )
+        
+        save(context: context)
         
     }
     

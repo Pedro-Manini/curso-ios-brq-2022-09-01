@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct ProjVerao2024App: App {
+struct ProjetoiCal: App {
     
     @StateObject private var dataController = DataController()
     
