@@ -39,8 +39,6 @@
 		767EDA2128D100860077071B = {
 			isa = PBXGroup;
 			children = (
-				767EDA3B28D1199D0077071B /* BlueCircleView.swift */,
-				767EDA3D28D11B650077071B /* YellowCircleView.swift */,
 				767EDA2C28D100860077071B /* ProjetoNav */,
 				767EDA2B28D100860077071B /* Products */,
 			);
@@ -57,8 +55,10 @@
 		767EDA2C28D100860077071B /* ProjetoNav */ = {
 			isa = PBXGroup;
 			children = (
-				767EDA2D28D100860077071B /* ProjetoNavApp.swift */,
 				767EDA2F28D100860077071B /* ContentView.swift */,
+				767EDA3B28D1199D0077071B /* BlueCircleView.swift */,
+				767EDA3D28D11B650077071B /* YellowCircleView.swift */,
+				767EDA2D28D100860077071B /* ProjetoNavApp.swift */,
 				767EDA3128D100880077071B /* Assets.xcassets */,
 				767EDA3328D100880077071B /* Preview Content */,
 			);
