@@ -37,19 +37,19 @@ class DataController : ObservableObject {
      */
     let container = NSPersistentContainer(name: "FoodModel")
     
-    init(){
+    init() {
         /**
             Quando inicializa-se o container (NSPersistentContainer), é necessário carregar os objetos do Core Data para poderem ser manipulados
          */
-        container.loadPersistentStores{ description, error in
-            if let error = error{
+        container.loadPersistentStores {description, error in
+            if let error = error {
                 print("Erro ao carregar os dados \(error)")
             }
             
         }
     }
 
-    func save(context: NSManagedObjectContext){
+    func save(context: NSManagedObjectContext) {
         do{
             // try - catch
             try context.save()
@@ -63,7 +63,7 @@ class DataController : ObservableObject {
     /**
             UUID , name, date, calories
      */
-    func addFood(name: String, calories: Double, context : NSManagedObjectContext){
+    func addFood(name: String, calories: Double, context : NSManagedObjectContext) {
         
         let food = Food(context: context)
         
@@ -76,7 +76,7 @@ class DataController : ObservableObject {
     }
     
 
-    func editFood(foodOld: Food, name: String, calories: Double, context: NSManagedObjectContext){
+    func editFood(foodOld: Food, name: String, calories: Double, context: NSManagedObjectContext) {
         
         foodOld.name = name
         foodOld.calories = calories
@@ -86,7 +86,7 @@ class DataController : ObservableObject {
     
     }
     
-    func deleteFood(offsets: IndexSet, context: NSManagedObjectContext, food: FetchedResults<Food>){
+    func deleteFood(offsets: IndexSet, context: NSManagedObjectContext, food: FetchedResults<Food>) {
         
         // para cada elemento que queremos deletar, temos que atualizar o contexto com esta operação
         // offsets é uma lista

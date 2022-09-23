@@ -7,6 +7,7 @@
 
 import Foundation
 import CoreData
+import SwiftUI
 
 
 
@@ -14,22 +15,21 @@ import CoreData
 ///Classe controladora CRUD
 class DataController : ObservableObject {
     
-    let container = NSPersistentContainer(name: "UserModel")
     
-    init(){
-        
+      let container = NSPersistentContainer(name: "UserModel")
+
+    init() {
+
         container.loadPersistentStores { description, error in
             if let error = error{
                 print("Erro ao carregar os dados: \(error.localizedDescription)")
-                
-            }            
+            }
         }
     }
     
     func save(context: NSManagedObjectContext) {
-        
-        do {
-            
+    
+        do {            
             try context.save()
         }
         catch {
@@ -47,7 +47,7 @@ class DataController : ObservableObject {
         user.senha = senha
         user.email = email
         user.id = UUID()
-        user.dia = Date()
+        user.date = Date()
         
         save(context: context)
         
@@ -60,21 +60,20 @@ class DataController : ObservableObject {
         userOld.sobrenome = sobrenome
         userOld.senha = senha
         userOld.email = email
-        userOld.id = UUID()
-        userOld.dia = Date()
+        userOld.date = Date()
         
         save(context: context)
         
     }
     
     
-    func deleteUsuarios(offsets: IndexSet, context: NSManagedObjectContext, user: FetchedResults<Usuarios>) {
-        
-        offsets.map{ user[$0] }
-            .forEach( context.delete )
-        
+    func deleteUsuarios(offsets: IndexSet, context: NSManagedObjectContext, user: FetchedResults<Usuarios> ) {
+
+        offsets.map{user[$0]}
+            .forEach(context.delete)
+
         save(context: context)
-        
+
     }
     
     

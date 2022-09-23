@@ -14,11 +14,19 @@ import Foundation
         Serializar é o ato de transformar um objeto em binário (0 e 1) -> Codable
         Deserializar é o ato de pegar um binário e transfomar em um objeto -> Decodable
  */
-class ViewModel {
+class ViewModel: ObservableObject {
     
     let urlAddr: String = "https://cors.grandeporte.com.br/cursos.grandeporte.com.br:8080/professores"
     
-    var items: [ProfessorModel] = []
+    // @Published serve para notificar a tela (swift ui) quando esta variável for modificada
+        @Published var items : [ProfessorModel] = []
+    
+    
+    // fazer um construtor para quando instanciarmos um objeto do tipo View Model,
+        // a variável items será carregada com os professores vindo da API
+        init(){
+            fetchProfessores()
+        }
     
     /**
                 Fetch é pegar todos os dados da API
@@ -169,6 +177,8 @@ class ViewModel {
                 print("error: \(error!)")
                 return
             }// if
+            
+            self.fetchProfessores()
             
             //resume executa a tarefa
         }.resume()

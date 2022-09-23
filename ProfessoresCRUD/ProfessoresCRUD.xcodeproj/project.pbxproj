@@ -13,6 +13,7 @@
 		7647400C28DB8334008D0B80 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7647400B28DB8334008D0B80 /* Preview Assets.xcassets */; };
 		7647401428DB85B2008D0B80 /* ProfessorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7647401328DB85B2008D0B80 /* ProfessorModel.swift */; };
 		7647401628DB86AD008D0B80 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7647401528DB86AD008D0B80 /* ViewModel.swift */; };
+		766A8C0128DCF0BC00CC9299 /* AddProfessoresView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766A8C0028DCF0BC00CC9299 /* AddProfessoresView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		7647400B28DB8334008D0B80 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7647401328DB85B2008D0B80 /* ProfessorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfessorModel.swift; sourceTree = "<group>"; };
 		7647401528DB86AD008D0B80 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		766A8C0028DCF0BC00CC9299 /* AddProfessoresView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProfessoresView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 			children = (
 				7647401228DB852A008D0B80 /* DataModel */,
 				7647400628DB8333008D0B80 /* ContentView.swift */,
+				766A8C0028DCF0BC00CC9299 /* AddProfessoresView.swift */,
 				7647400428DB8333008D0B80 /* ProfessoresCRUDApp.swift */,
 				7647400828DB8334008D0B80 /* Assets.xcassets */,
 				7647400A28DB8334008D0B80 /* Preview Content */,
@@ -153,6 +156,7 @@
 			files = (
 				7647401428DB85B2008D0B80 /* ProfessorModel.swift in Sources */,
 				7647400728DB8333008D0B80 /* ContentView.swift in Sources */,
+				766A8C0128DCF0BC00CC9299 /* AddProfessoresView.swift in Sources */,
 				7647401628DB86AD008D0B80 /* ViewModel.swift in Sources */,
 				7647400528DB8333008D0B80 /* ProfessoresCRUDApp.swift in Sources */,
 			);

@@ -2,7 +2,7 @@
 //  EditUserView.swift
 //  Projeto User
 //
-//  Created by user222137 on 9/20/22.
+//  Created by Pedro Manini on 9/20/22.
 //
 
 import SwiftUI
@@ -25,12 +25,14 @@ struct EditUserView: View {
     var body: some View {
         
         Form{
-            Section{
+            Section {
                 TextField("Nome do usuario", text: $nome )
+                TextField("Sobrenome do usuario", text: $sobrenome)
+                TextField("Email do usuario", text: $email )
+                TextField("Senha do usuario", text: $senha )
                 
-                
-                    .onAppear(){
-                       
+                    .onAppear() {
+                    ///Tratando os opcionais
                         if let nome = user.nome {
                             self.nome = nome
                         }
@@ -49,8 +51,8 @@ struct EditUserView: View {
                         
                     }
                 
-                HStack{
-                    Button("Editar"){
+                HStack {
+                    Button("Editar") {
                         DataController().editUsuarios(userOld: user, nome: self.nome, sobrenome: self.sobrenome, senha: self.senha, email: self.email, context: managedObjectContext)
                         
                         dismiss()
@@ -59,7 +61,6 @@ struct EditUserView: View {
                 }
             }
         }
-        
     }
 }
 

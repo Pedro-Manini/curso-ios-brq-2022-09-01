@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		761C0B9828DD300100FA0659 /* IndividualUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761C0B9728DD300100FA0659 /* IndividualUserView.swift */; };
 		7678488A28DA618900D1AB95 /* UserModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7678488828DA618900D1AB95 /* UserModel.xcdatamodeld */; };
 		7678488C28DA88EA00D1AB95 /* EditUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7678488B28DA88EA00D1AB95 /* EditUserView.swift */; };
 		767CE3D628D92FD400C7D3C9 /* Projeto_UserApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767CE3D528D92FD400C7D3C9 /* Projeto_UserApp.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		761C0B9728DD300100FA0659 /* IndividualUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndividualUserView.swift; sourceTree = SOURCE_ROOT; };
 		7678488928DA618900D1AB95 /* UserModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = UserModel.xcdatamodel; sourceTree = "<group>"; };
 		7678488B28DA88EA00D1AB95 /* EditUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditUserView.swift; sourceTree = "<group>"; };
 		767CE3D228D92FD400C7D3C9 /* Projeto User.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Projeto User.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -40,6 +42,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		761C0B9628DD2FC100FA0659 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				761C0B9728DD300100FA0659 /* IndividualUserView.swift */,
+				767CE3D728D92FD400C7D3C9 /* ContentView.swift */,
+				767CE3EB28D9536200C7D3C9 /* AddUserView.swift */,
+				7678488B28DA88EA00D1AB95 /* EditUserView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		767CE3C928D92FD400C7D3C9 = {
 			isa = PBXGroup;
 			children = (
@@ -60,9 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				767CE3EA28D9404F00C7D3C9 /* DataModel */,
-				767CE3D728D92FD400C7D3C9 /* ContentView.swift */,
-				767CE3EB28D9536200C7D3C9 /* AddUserView.swift */,
-				7678488B28DA88EA00D1AB95 /* EditUserView.swift */,
+				761C0B9628DD2FC100FA0659 /* Views */,
 				767CE3D528D92FD400C7D3C9 /* Projeto_UserApp.swift */,
 				767CE3D928D92FD500C7D3C9 /* Assets.xcassets */,
 				767CE3DB28D92FD500C7D3C9 /* Preview Content */,
@@ -158,6 +169,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7678488A28DA618900D1AB95 /* UserModel.xcdatamodeld in Sources */,
+				761C0B9828DD300100FA0659 /* IndividualUserView.swift in Sources */,
 				767CE3D828D92FD400C7D3C9 /* ContentView.swift in Sources */,
 				767CE3EC28D9536200C7D3C9 /* AddUserView.swift in Sources */,
 				7678488C28DA88EA00D1AB95 /* EditUserView.swift in Sources */,

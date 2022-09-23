@@ -2,7 +2,7 @@
 //  AddUserView.swift
 //  Projeto User
 //
-//  Created by user222137 on 9/19/22.
+//  Created by Pedro Manini on 9/19/22.
 //
 
 import SwiftUI
@@ -26,8 +26,9 @@ struct AddFoodView: View {
         Form{
             Section{
                 TextField("Nome do usuario", text: $nome )
-                
-                
+                TextField("Sobrenome do usuario", text: $sobrenome)
+                TextField("Email do usuario", text: $email )
+                TextField("Senha do usuario", text: $senha )
                 HStack{
                     Button("Adicionar"){
                         DataController().addUsuarios(nome: self.nome, sobrenome: self.sobrenome, senha: self.senha, email: self.email, context: managedObjectContext)
