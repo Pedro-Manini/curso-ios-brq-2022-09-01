@@ -76,20 +76,7 @@ struct ContentView: View {
         }
     }
             
-            
-//            .toolbar {
-//                ToolbarItem(placement: .navigationBarTrailing) {
-//                    EditButton()
-//                }
-//                ToolbarItem {
-//                    Button(action: //addUsuarios) {
-//                        Label("Add Item", systemImage: "plus"))
-//                }
-//            }
-    
-
-            
-        
+                
     func deleteUsuarios(offset:IndexSet) {
 
         DataController().deleteUsuarios(offsets: offset, context: managedObjectContext, user: user)

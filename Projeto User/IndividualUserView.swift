@@ -20,7 +20,12 @@ struct IndividualUserView: View {
         
         
         
-        
+        VStack{
+            
+            Text("Informações deste usuário:")
+            
+        }
+            
         
         VStack {
             
@@ -29,7 +34,9 @@ struct IndividualUserView: View {
             Text("Email: \(user.email ?? "")")
             Text("Senha: \(user.senha ?? "")")
             
-        }
+        }.padding()
+            
+        
         
         VStack {
             
@@ -39,7 +46,7 @@ struct IndividualUserView: View {
                 Label("", systemImage: "highlighter")
             }
             
-        }
+        }.padding()
         .sheet(isPresented: $isAddView){
             EditUserView(user: user)
         }
