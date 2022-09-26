@@ -9,27 +9,43 @@ import SwiftUI
 import CoreData
 
 struct IndividualUserView: View {
-
+    
     @Environment(\.managedObjectContext) var managedObjectContext
-
-    //@FetchRequest(sortDescriptors: [SortDescriptor(\.name)]) var user: FetchedResults<Usuarios>
-
+    @State var isAddView : Bool = false
+    
+    var user: FetchedResults<Usuarios>.Element
+    
+    
     var body: some View {
-
+        
+        
+        
+        
+        
         VStack {
-
-            Text("Informações do usuario ")
-
-            VStack{
-                
-                List {
-
-                                
-
-
-                }
-            }
+            
+            Text("Nome: \(user.nome ?? "")")
+            Text("Sobrenome: \(user.sobrenome ?? "")")
+            Text("Email: \(user.email ?? "")")
+            Text("Senha: \(user.senha ?? "")")
+            
         }
+        
+        VStack {
+            
+            Button{
+                isAddView = true
+            } label: {
+                Label("", systemImage: "highlighter")
+            }
+            
+        }
+        .sheet(isPresented: $isAddView){
+            EditUserView(user: user)
+        }
+        
+        
+        
     }
 }
 

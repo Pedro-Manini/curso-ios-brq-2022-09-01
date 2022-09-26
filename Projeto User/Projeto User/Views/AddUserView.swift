@@ -8,7 +8,7 @@
 import SwiftUI
 import CoreData
 
-struct AddFoodView: View {
+struct AddUserView: View {
     
     @Environment(\.managedObjectContext) var managedObjectContext
     
@@ -21,14 +21,15 @@ struct AddFoodView: View {
     //@Binding var isAddView : Bool
     @Environment(\.dismiss) var dismiss
     
+    
     var body: some View {
         
         Form{
             Section{
-                TextField("Nome do usuario", text: $nome )
-                TextField("Sobrenome do usuario", text: $sobrenome)
-                TextField("Email do usuario", text: $email )
-                TextField("Senha do usuario", text: $senha )
+                TextField("Nome do usuario", text: $nome ).autocapitalization(.none)
+                TextField("Sobrenome do usuario", text: $sobrenome).autocapitalization(.none)
+                TextField("Email do usuario", text: $email ).autocapitalization(.none)
+                TextField("Senha do usuario", text: $senha ).autocapitalization(.none)
                 HStack{
                     Button("Adicionar"){
                         DataController().addUsuarios(nome: self.nome, sobrenome: self.sobrenome, senha: self.senha, email: self.email, context: managedObjectContext)

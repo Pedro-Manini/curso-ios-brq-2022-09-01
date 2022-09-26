@@ -22,6 +22,8 @@ struct EditUserView: View {
     
     var user: FetchedResults<Usuarios>.Element
     
+    
+    
     var body: some View {
         
         Form{

@@ -16,6 +16,8 @@ struct ContentView: View {
 
     @EnvironmentObject var dataController: DataController
     
+    @State var isAddView : Bool = false
+    
     
     var body: some View {
         NavigationView {
@@ -26,15 +28,6 @@ struct ContentView: View {
                     .foregroundColor(.gray)
                     .padding()
                 
-                VStack {
-
-                    Button("Add"){
-
-                        dataController.addUsuarios(nome: "aaaaaaa", sobrenome: "bbbbbbb", senha: "senha123", email: "aaaaaaa@email.com", context: managedObjectContext)
-
-                    }
-                }
-               
                 
                 List {
                     
@@ -49,18 +42,16 @@ struct ContentView: View {
                                 
                                 Spacer()
                                 
-                                Text(timeSince(date: Date()))
+                                Text (timeSince(date: userElement.date ?? Date()))
                                 
                             }
                             
-                            // TODO: TRAZER INDICE PARA INDIVIDUAL VIEW
-                            NavigationLink(destination: IndividualUserView()){
+                            
+                            NavigationLink(destination: IndividualUserView(user: userElement)){
                                
                                 
                             }
                                 
-                                
-                          
                         }
 
                     }
@@ -72,16 +63,17 @@ struct ContentView: View {
                 .toolbar {
                     ToolbarItem(placement: .navigationBarTrailing){
                         Button{
-                           
+                            isAddView = true
                         } label: {
                             Label("Add Label", systemImage: "plus.circle")
                         }
                     }
                 }
+                .sheet(isPresented: $isAddView){
+                    AddUserView()
+                }
             }
-                    
         }
-                
     }
             
             
