@@ -19,15 +19,17 @@ struct IndividualUserView: View {
     var body: some View {
         
         
-        
-        VStack{
-            
+        VStack {
             Text("Informações deste usuário:")
-            
+                .font(.custom("San Francisco", size: 25))
+                .padding()
+                .multilineTextAlignment(.center)
+                .bold()
         }
             
         
         VStack {
+     
             
             Text("Nome: \(user.nome ?? "")")
             Text("Sobrenome: \(user.sobrenome ?? "")")
@@ -50,10 +52,5 @@ struct IndividualUserView: View {
         .sheet(isPresented: $isAddView){
             EditUserView(user: user)
         }
-        
-        
-        
     }
 }
-
-

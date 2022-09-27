@@ -22,9 +22,8 @@ struct EditUserView: View {
     
     var user: FetchedResults<Usuarios>.Element
     
-    
-    
     var body: some View {
+        
         
         Form{
             Section {
@@ -47,7 +46,7 @@ struct EditUserView: View {
                             self.email = email
                         }
                         
-                        if let senha = user.sobrenome {
+                        if let senha = user.senha {
                             self.senha = senha
                         }
                         
