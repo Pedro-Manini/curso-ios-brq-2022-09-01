@@ -20,7 +20,7 @@ struct EditUserView: View {
     
     @Environment(\.dismiss) var dismiss
     
-    var user: FetchedResults<Usuarios>.Element
+    @ObservedObject var user: FetchedResults<Usuarios>.Element
     
     var body: some View {
         
@@ -55,6 +55,7 @@ struct EditUserView: View {
                 HStack {
                     Button("Editar") {
                         DataController().editUsuarios(userOld: user, nome: self.nome, sobrenome: self.sobrenome, senha: self.senha, email: self.email, context: managedObjectContext)
+                        
                         
                         dismiss()
                         

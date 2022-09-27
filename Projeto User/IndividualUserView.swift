@@ -13,7 +13,7 @@ struct IndividualUserView: View {
     @Environment(\.managedObjectContext) var managedObjectContext
     @State var isAddView : Bool = false
     
-    var user: FetchedResults<Usuarios>.Element
+    @StateObject var user: FetchedResults<Usuarios>.Element
     
     
     var body: some View {
