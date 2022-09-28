@@ -7,20 +7,22 @@
 
 import Foundation
 
-class ViewModel : ObservableObject {
-    
-    //let urlAddr : String = "https://pokeapi.co/api/v2/pokemon?limit=1500&offset=0"
-    
+class ViewModel: ObservableObject {
     
     @Published var pokeModels: [PokemonModel] = []
     
-    init() {
-        fetchPokemons()
-    }
+  
     
-    func fetchPokemons() {
+    var urlAddr = "https://pokeapi.co/api/v2/pokemon?limit=10&offset=0"
+    
+    
+//    init() {
+//        fetchPokemons(urlAddr: urlAddr)
+//    }
+    
+    func fetchPokemons(urlAddr: String) {
         
-        guard let url = URL(string: "https://pokeapi.co/api/v2/pokemon?limit=10&offset=0") else {
+        guard let url = URL(string: urlAddr) else {
             print("URL NOT FOUND")
             return
         }
@@ -44,5 +46,5 @@ class ViewModel : ObservableObject {
             }
             
         }.resume()
-    }
+    }//fetch
 }
